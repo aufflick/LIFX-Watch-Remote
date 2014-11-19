@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9553C0DC142BECA1B67AF4DF"
+               BlueprintIdentifier = "1721E57790C8BFA6AEC0B0AE"
                BuildableName = "libPods-LIFX Watch Remote.a"
                BlueprintName = "Pods-LIFX Watch Remote"
                ReferencedContainer = "container:Pods.xcodeproj">

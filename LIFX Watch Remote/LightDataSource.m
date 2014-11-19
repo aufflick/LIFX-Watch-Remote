@@ -42,6 +42,13 @@
     return self;
 }
 
+- (NSUInteger)count
+{
+    return [_lights count];
+}
+
+#pragma mark - LFXLightCollectionDelegate methods
+
 - (void)lightCollection:(LFXLightCollection *)lightCollection didAddLight:(LFXLight *)light
 {
     if (![self.lights containsObject:light])

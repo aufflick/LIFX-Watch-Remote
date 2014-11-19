@@ -12,16 +12,28 @@
                     <items>
                         <table alignment="left" layout="vertical" id="87j-ZQ-YjA">
                             <items>
-                                <tableRow id="DnL-tA-vYc">
+                                <tableRow identifier="LightRowIdentifier" id="DnL-tA-vYc" customClass="LightRowController">
                                     <group key="rootItem" width="1" alignment="left" id="mkh-1C-8eG">
                                         <items>
-                                            <switch width="1" alignment="left" value="YES" title="Light" id="OS4-in-v8n"/>
+                                            <label width="91.5" height="36.5" alignment="left" text="Label" id="54t-QI-8N1"/>
+                                            <button width="40" alignment="left" title="Off" id="J3M-iD-bw5">
+                                                <connections>
+                                                    <action selector="togglePower" destination="DnL-tA-vYc" id="wTW-Mh-luo"/>
+                                                </connections>
+                                            </button>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="button" destination="J3M-iD-bw5" id="Gqu-iL-YtV"/>
+                                        <outlet property="label" destination="54t-QI-8N1" id="xqP-Jf-tG7"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="87j-ZQ-YjA" id="yWO-dN-ma9"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="231" y="451"/>

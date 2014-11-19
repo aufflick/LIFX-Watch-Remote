@@ -7,37 +7,79 @@
 //
 
 #import "InterfaceController.h"
+#import "LightDataSource.h"
+#import "LightRowController.h"
 
+static NSString * const LightRowIdentifier = @"LightRowIdentifier";
 
-@interface InterfaceController()
+@interface InterfaceController() <LightDataSourceDelegate>
+{
+    BOOL isShowing;
+}
+
+@property (nonatomic, strong) LightDataSource * dataSource;
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
 
 @end
 
 
 @implementation InterfaceController
 
+#pragma mark - Interface Lifecycle
+
 - (instancetype)initWithContext:(id)context
 {
-    self = [super initWithContext:context];
-    if (self){
-        // Initialize variables here.
-        // Configure interface objects here.
-        NSLog(@"%@ initWithContext", self);
-        
-    }
+    if (nil == (self = [super initWithContext:context]))
+        return nil;
+    
+    self.dataSource = [[LightDataSource alloc] init];
+    self.dataSource.delegate = self;
+    
     return self;
 }
 
 - (void)willActivate
 {
-    // This method is called when watch view controller is about to be visible to user
-    NSLog(@"%@ will activate", self);
+    [self.table setNumberOfRows:self.dataSource.count withRowType:LightRowIdentifier];
+    isShowing = YES;
+    
+    for (NSInteger i=0; i < self.table.numberOfRows; i++)
+        [self updateRowAtIndex:i];
 }
 
 - (void)didDeactivate
 {
-    // This method is called when watch view controller is no longer visible
-    NSLog(@"%@ did deactivate", self);
+    isShowing = NO;
+}
+
+- (void)updateRowAtIndex:(NSInteger)idx
+{
+    LightRowController * rowController = [self.table rowControllerAtIndex:idx];
+    rowController.light = self.dataSource.lights[idx];
+}
+
+#pragma mark - Magical Table Delegate
+
+- (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex
+{
+    NSLog(@"show light at index: %ld", rowIndex);
+}
+
+#pragma mark - LightDataSourceDelegate
+
+- (void)lightDataSource:(LightDataSource *)lightSource didInsertLightAtIndex:(NSInteger)idx
+{
+    if (isShowing)
+    {
+        [self.table insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:idx] withRowType:LightRowIdentifier];
+        [self updateRowAtIndex:idx];
+    }
+}
+
+- (void)lightDataSource:(LightDataSource *)lightSource didRemoveLightAtIndex:(NSInteger)idx
+{
+    if (isShowing)
+        [self.table removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:idx]];
 }
 
 @end

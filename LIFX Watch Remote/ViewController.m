@@ -26,6 +26,8 @@
 
 @implementation ViewController
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,6 +61,8 @@
     }
 }
 
+#pragma mark - IBActions
+
 - (IBAction)brightnessOrKelvinChanged:(UISlider *)sender
 {
     LFXHSBKColor * colour = [LFXHSBKColor whiteColorWithBrightness:self.brightnessSlider.value
@@ -89,7 +93,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dataSource.lights count];
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

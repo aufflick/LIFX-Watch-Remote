@@ -14,6 +14,7 @@
 
 @property (nonatomic, weak) id<LightDataSourceDelegate> delegate;
 @property (nonatomic, readonly) NSArray * lights;
+@property (nonatomic, readonly) NSUInteger count;
 
 @end
 
