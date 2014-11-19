@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Lights!-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller title="Lights!" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <table alignment="left" layout="vertical" id="87j-ZQ-YjA">
                             <items>
@@ -36,7 +36,14 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="231" y="451"/>
+            <point key="canvasLocation" x="65" y="451"/>
+        </scene>
+        <!--LightDetailScreen-->
+        <scene sceneID="giH-6x-Z4a">
+            <objects>
+                <controller identifier="LightDetailScreen" id="0Ju-Ul-rO0" customClass="LightDetailScreen"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="451"/>
         </scene>
     </scenes>
 </document>

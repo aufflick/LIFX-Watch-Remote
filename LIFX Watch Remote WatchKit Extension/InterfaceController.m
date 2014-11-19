@@ -13,9 +13,6 @@
 static NSString * const LightRowIdentifier = @"LightRowIdentifier";
 
 @interface InterfaceController() <LightDataSourceDelegate>
-{
-    BOOL isShowing;
-}
 
 @property (nonatomic, strong) LightDataSource * dataSource;
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
@@ -35,21 +32,20 @@ static NSString * const LightRowIdentifier = @"LightRowIdentifier";
     self.dataSource = [[LightDataSource alloc] init];
     self.dataSource.delegate = self;
     
+    [self.table setNumberOfRows:self.dataSource.count withRowType:LightRowIdentifier];
+    
+    for (NSInteger i=0; i < self.table.numberOfRows; i++)
+        [self updateRowAtIndex:i];
+    
     return self;
 }
 
 - (void)willActivate
 {
-    [self.table setNumberOfRows:self.dataSource.count withRowType:LightRowIdentifier];
-    isShowing = YES;
-    
-    for (NSInteger i=0; i < self.table.numberOfRows; i++)
-        [self updateRowAtIndex:i];
 }
 
 - (void)didDeactivate
 {
-    isShowing = NO;
 }
 
 - (void)updateRowAtIndex:(NSInteger)idx
@@ -62,24 +58,20 @@ static NSString * const LightRowIdentifier = @"LightRowIdentifier";
 
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex
 {
-    NSLog(@"show light at index: %ld", rowIndex);
+    [self pushControllerWithName:@"LightDetailScreen" context:self.dataSource.lights[rowIndex]];
 }
 
 #pragma mark - LightDataSourceDelegate
 
 - (void)lightDataSource:(LightDataSource *)lightSource didInsertLightAtIndex:(NSInteger)idx
 {
-    if (isShowing)
-    {
-        [self.table insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:idx] withRowType:LightRowIdentifier];
-        [self updateRowAtIndex:idx];
-    }
+    [self.table insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:idx] withRowType:LightRowIdentifier];
+    [self updateRowAtIndex:idx];
 }
 
 - (void)lightDataSource:(LightDataSource *)lightSource didRemoveLightAtIndex:(NSInteger)idx
 {
-    if (isShowing)
-        [self.table removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:idx]];
+    [self.table removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:idx]];
 }
 
 @end

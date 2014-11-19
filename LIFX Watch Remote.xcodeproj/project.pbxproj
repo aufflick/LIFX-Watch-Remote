@@ -18,6 +18,7 @@
 		640AB3F21A1CACC100719F97 /* LightDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 640AB3F11A1CACC100719F97 /* LightDataSource.m */; };
 		640AB3F31A1CACC100719F97 /* LightDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 640AB3F11A1CACC100719F97 /* LightDataSource.m */; };
 		640AB3F61A1CB59B00719F97 /* LightRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640AB3F51A1CB59B00719F97 /* LightRowController.m */; };
+		640AB3F91A1CDA5200719F97 /* LightDetailScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 640AB3F81A1CDA5200719F97 /* LightDetailScreen.m */; };
 		64D294081A1C379C00C8FB7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D294071A1C379C00C8FB7F /* main.m */; };
 		64D2940B1A1C379C00C8FB7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D2940A1A1C379C00C8FB7F /* AppDelegate.m */; };
 		64D2940E1A1C379C00C8FB7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D2940D1A1C379C00C8FB7F /* ViewController.m */; };
@@ -83,6 +84,8 @@
 		640AB3F11A1CACC100719F97 /* LightDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightDataSource.m; sourceTree = "<group>"; };
 		640AB3F41A1CB59B00719F97 /* LightRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightRowController.h; sourceTree = "<group>"; };
 		640AB3F51A1CB59B00719F97 /* LightRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightRowController.m; sourceTree = "<group>"; };
+		640AB3F71A1CDA5200719F97 /* LightDetailScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightDetailScreen.h; sourceTree = "<group>"; };
+		640AB3F81A1CDA5200719F97 /* LightDetailScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightDetailScreen.m; sourceTree = "<group>"; };
 		64D294021A1C379C00C8FB7F /* LIFX Watch Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIFX Watch Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D294061A1C379C00C8FB7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D294071A1C379C00C8FB7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				6405D9C41A1CA8360079D562 /* InterfaceController.m */,
 				640AB3F41A1CB59B00719F97 /* LightRowController.h */,
 				640AB3F51A1CB59B00719F97 /* LightRowController.m */,
+				640AB3F71A1CDA5200719F97 /* LightDetailScreen.h */,
+				640AB3F81A1CDA5200719F97 /* LightDetailScreen.m */,
 				6405D9C61A1CA8360079D562 /* Images.xcassets */,
 				6405D9C11A1CA8360079D562 /* Supporting Files */,
 			);
@@ -486,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6405D9C51A1CA8360079D562 /* InterfaceController.m in Sources */,
+				640AB3F91A1CDA5200719F97 /* LightDetailScreen.m in Sources */,
 				640AB3F61A1CB59B00719F97 /* LightRowController.m in Sources */,
 				640AB3F31A1CACC100719F97 /* LightDataSource.m in Sources */,
 			);
