@@ -11,6 +11,8 @@
 @interface LightDetailScreen ()
 
 @property (nonatomic, strong) LFXLight * light;
+@property (weak, nonatomic) IBOutlet WKInterfaceSlider * brightnessSlider;
+@property (weak, nonatomic) IBOutlet WKInterfaceSlider * colourTempSlider;
 
 @end
 
@@ -31,7 +33,24 @@
 - (void)setLight:(LFXLight *)light
 {
     _light = light;
-    [self setTitle:light.label];
+    
+    LFXHSBKColor * colour = light.color;
+    self.brightnessSlider.value = colour.brightness;
+    self.colourTempSlider.value = colour.kelvin;
+}
+
+- (IBAction)changeBrightness:(float)value
+{
+    self.light.color = [self.light.color colorWithBrightness:value];
+}
+
+- (IBAction)changeColourTemp:(float)value
+{
+    double brightness = self.light.color.brightness;
+    LFXHSBKColor * colour = [LFXHSBKColor whiteColorWithBrightness:brightness
+                                                            kelvin:value];
+    self.light.color = colour;
+
 }
 
 @end

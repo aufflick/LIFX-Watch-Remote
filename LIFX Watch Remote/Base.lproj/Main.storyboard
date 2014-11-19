@@ -42,7 +42,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelvin:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vii-N8-G4h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour Temp:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vii-N8-G4h">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -96,8 +96,16 @@
                             <constraint firstItem="y7e-H4-utw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="aSX-xZ-XNZ"/>
                             <constraint firstItem="LR8-3l-dQ1" firstAttribute="leading" secondItem="kBQ-aJ-hJD" secondAttribute="leading" id="aXN-oU-7nj"/>
                             <constraint firstItem="61m-SC-aVt" firstAttribute="baseline" secondItem="kBQ-aJ-hJD" secondAttribute="baseline" id="kf9-zj-Fri"/>
-                            <constraint firstItem="flq-f4-BPo" firstAttribute="centerY" secondItem="vii-N8-G4h" secondAttribute="centerY" constant="0.5" id="led-Dm-P1q"/>
+                            <constraint firstItem="flq-f4-BPo" firstAttribute="centerY" secondItem="vii-N8-G4h" secondAttribute="centerY" constant="0.5" id="led-Dm-P1q">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="vii-N8-G4h" firstAttribute="top" secondItem="AS0-J5-6i8" secondAttribute="bottom" constant="20" id="lhg-Ld-f5X"/>
+                            <constraint firstItem="flq-f4-BPo" firstAttribute="leading" secondItem="vii-N8-G4h" secondAttribute="trailing" constant="-6" id="pje-Hy-gMb">
+                                <variation key="heightClass=regular" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="LR8-3l-dQ1" firstAttribute="leading" secondItem="flq-f4-BPo" secondAttribute="leading" constant="-14" id="psb-2i-6tC">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="XkB-ux-KBh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="s0p-eT-vtw"/>
                             <constraint firstItem="AS0-J5-6i8" firstAttribute="top" secondItem="61m-SC-aVt" secondAttribute="bottom" constant="20" id="sgu-cQ-c8K"/>
                         </constraints>
@@ -123,9 +131,11 @@
                                 <exclude reference="4RK-Dl-4fB"/>
                                 <exclude reference="YwA-1r-A4l"/>
                                 <exclude reference="aXN-oU-7nj"/>
+                                <exclude reference="psb-2i-6tC"/>
                                 <exclude reference="Dry-wN-Ija"/>
                                 <exclude reference="OLI-Pm-Qt4"/>
                                 <exclude reference="led-Dm-P1q"/>
+                                <exclude reference="pje-Hy-gMb"/>
                                 <exclude reference="KAW-81-ww2"/>
                                 <exclude reference="s0p-eT-vtw"/>
                                 <exclude reference="CbR-fS-TWl"/>
@@ -154,9 +164,11 @@
                                 <include reference="4RK-Dl-4fB"/>
                                 <include reference="YwA-1r-A4l"/>
                                 <include reference="aXN-oU-7nj"/>
-                                <include reference="Dry-wN-Ija"/>
+                                <include reference="psb-2i-6tC"/>
+                                <exclude reference="Dry-wN-Ija"/>
                                 <include reference="OLI-Pm-Qt4"/>
                                 <include reference="led-Dm-P1q"/>
+                                <include reference="pje-Hy-gMb"/>
                                 <include reference="KAW-81-ww2"/>
                                 <include reference="s0p-eT-vtw"/>
                                 <include reference="CbR-fS-TWl"/>

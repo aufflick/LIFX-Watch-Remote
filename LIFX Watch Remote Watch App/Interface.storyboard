@@ -41,9 +41,28 @@
         <!--LightDetailScreen-->
         <scene sceneID="giH-6x-Z4a">
             <objects>
-                <controller identifier="LightDetailScreen" id="0Ju-Ul-rO0" customClass="LightDetailScreen"/>
+                <controller identifier="LightDetailScreen" id="0Ju-Ul-rO0" customClass="LightDetailScreen">
+                    <items>
+                        <label alignment="left" text="Brightness" id="lyA-bO-ow4"/>
+                        <slider width="1" alignment="left" value="0.5" steps="10" id="uJ2-uS-FRg">
+                            <connections>
+                                <action selector="changeBrightness:" destination="0Ju-Ul-rO0" id="h64-GN-ABJ"/>
+                            </connections>
+                        </slider>
+                        <label alignment="left" text="Colour Temp" id="4km-iK-oj5"/>
+                        <slider width="1" alignment="left" value="1" minimum="2500" maximum="9600" steps="10" id="YVZ-js-6SG">
+                            <connections>
+                                <action selector="changeColourTemp:" destination="0Ju-Ul-rO0" id="5Kq-3p-vn2"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="uJ2-uS-FRg" id="krz-ES-CEl"/>
+                        <outlet property="colourTempSlider" destination="YVZ-js-6SG" id="tTE-eT-sPp"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="289" y="451"/>
+            <point key="canvasLocation" x="65" y="686"/>
         </scene>
     </scenes>
 </document>
