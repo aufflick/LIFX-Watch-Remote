@@ -1,0 +1,1 @@
+../../../LIFXKit/LIFXKit/Classes-Common/LFXDeviceMapping.h

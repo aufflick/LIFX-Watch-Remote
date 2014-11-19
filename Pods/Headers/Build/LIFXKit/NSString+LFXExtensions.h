@@ -1,0 +1,1 @@
+../../../LIFXKit/LIFXKit/Extensions/Categories-Cocoa/NSString+LFXExtensions.h

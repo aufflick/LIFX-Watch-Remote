@@ -1,0 +1,1 @@
+../../../LIFXKit/LIFXKit/Classes-Common/LFXLight+Private.h
