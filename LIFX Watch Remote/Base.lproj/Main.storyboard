@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-H4-utw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-H4-utw">
                                 <rect key="frame" x="16" y="160" width="568" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -34,17 +34,144 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="kon-MK-jiF"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61m-SC-aVt">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBQ-aJ-hJD">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS0-J5-6i8">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelvin:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vii-N8-G4h">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4000" minValue="2500" maxValue="9000" translatesAutoresizingMaskIntoConstraints="NO" id="flq-f4-BPo">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <connections>
+                                    <action selector="brightnessOrKelvinChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5ke-GA-cRY"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XkB-ux-KBh">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="SEI-JJ-YTW"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LR8-3l-dQ1">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <connections>
+                                    <action selector="brightnessOrKelvinChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="He3-1T-KbG"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y7e-H4-utw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CWH-Zk-Xit"/>
+                            <constraint firstItem="61m-SC-aVt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="09F-LR-HVw"/>
+                            <constraint firstItem="61m-SC-aVt" firstAttribute="leading" secondItem="AS0-J5-6i8" secondAttribute="leading" id="2Mf-tH-oi7"/>
+                            <constraint firstItem="LR8-3l-dQ1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4RK-Dl-4fB"/>
+                            <constraint firstItem="61m-SC-aVt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6b4-ht-BCq"/>
+                            <constraint firstAttribute="trailing" secondItem="y7e-H4-utw" secondAttribute="trailing" id="CbR-fS-TWl"/>
+                            <constraint firstItem="kBQ-aJ-hJD" firstAttribute="leading" secondItem="61m-SC-aVt" secondAttribute="trailing" constant="54" id="DPg-p1-jSn"/>
+                            <constraint firstItem="flq-f4-BPo" firstAttribute="leading" secondItem="LR8-3l-dQ1" secondAttribute="leading" id="Dry-wN-Ija"/>
+                            <constraint firstItem="y7e-H4-utw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ImP-Iw-PLs"/>
+                            <constraint firstItem="XkB-ux-KBh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KAW-81-ww2"/>
+                            <constraint firstItem="flq-f4-BPo" firstAttribute="trailing" secondItem="LR8-3l-dQ1" secondAttribute="trailing" id="OLI-Pm-Qt4"/>
+                            <constraint firstItem="AS0-J5-6i8" firstAttribute="leading" secondItem="vii-N8-G4h" secondAttribute="leading" id="Pc7-lb-ojU"/>
+                            <constraint firstItem="LR8-3l-dQ1" firstAttribute="centerY" secondItem="AS0-J5-6i8" secondAttribute="centerY" constant="0.5" id="YwA-1r-A4l"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y7e-H4-utw" secondAttribute="bottom" id="ZXd-Qo-vtH"/>
                             <constraint firstItem="y7e-H4-utw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="aSX-xZ-XNZ"/>
-                            <constraint firstItem="y7e-H4-utw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cGz-dO-YI1"/>
+                            <constraint firstItem="LR8-3l-dQ1" firstAttribute="leading" secondItem="kBQ-aJ-hJD" secondAttribute="leading" id="aXN-oU-7nj"/>
+                            <constraint firstItem="61m-SC-aVt" firstAttribute="baseline" secondItem="kBQ-aJ-hJD" secondAttribute="baseline" id="kf9-zj-Fri"/>
+                            <constraint firstItem="flq-f4-BPo" firstAttribute="centerY" secondItem="vii-N8-G4h" secondAttribute="centerY" constant="0.5" id="led-Dm-P1q"/>
+                            <constraint firstItem="vii-N8-G4h" firstAttribute="top" secondItem="AS0-J5-6i8" secondAttribute="bottom" constant="20" id="lhg-Ld-f5X"/>
+                            <constraint firstItem="XkB-ux-KBh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="s0p-eT-vtw"/>
+                            <constraint firstItem="AS0-J5-6i8" firstAttribute="top" secondItem="61m-SC-aVt" secondAttribute="bottom" constant="20" id="sgu-cQ-c8K"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="61m-SC-aVt"/>
+                                <exclude reference="kBQ-aJ-hJD"/>
+                                <exclude reference="AS0-J5-6i8"/>
+                                <exclude reference="vii-N8-G4h"/>
+                                <exclude reference="flq-f4-BPo"/>
+                                <exclude reference="XkB-ux-KBh"/>
+                                <exclude reference="LR8-3l-dQ1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="09F-LR-HVw"/>
+                                <exclude reference="2Mf-tH-oi7"/>
+                                <exclude reference="6b4-ht-BCq"/>
+                                <exclude reference="kf9-zj-Fri"/>
+                                <exclude reference="Pc7-lb-ojU"/>
+                                <exclude reference="sgu-cQ-c8K"/>
+                                <exclude reference="lhg-Ld-f5X"/>
+                                <exclude reference="DPg-p1-jSn"/>
+                                <exclude reference="4RK-Dl-4fB"/>
+                                <exclude reference="YwA-1r-A4l"/>
+                                <exclude reference="aXN-oU-7nj"/>
+                                <exclude reference="Dry-wN-Ija"/>
+                                <exclude reference="OLI-Pm-Qt4"/>
+                                <exclude reference="led-Dm-P1q"/>
+                                <exclude reference="CbR-fS-TWl"/>
+                                <exclude reference="ImP-Iw-PLs"/>
+                                <exclude reference="KAW-81-ww2"/>
+                                <exclude reference="s0p-eT-vtw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="61m-SC-aVt"/>
+                                <include reference="kBQ-aJ-hJD"/>
+                                <include reference="AS0-J5-6i8"/>
+                                <include reference="vii-N8-G4h"/>
+                                <include reference="flq-f4-BPo"/>
+                                <include reference="XkB-ux-KBh"/>
+                                <include reference="LR8-3l-dQ1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="09F-LR-HVw"/>
+                                <include reference="2Mf-tH-oi7"/>
+                                <include reference="6b4-ht-BCq"/>
+                                <include reference="kf9-zj-Fri"/>
+                                <include reference="Pc7-lb-ojU"/>
+                                <include reference="sgu-cQ-c8K"/>
+                                <include reference="lhg-Ld-f5X"/>
+                                <include reference="DPg-p1-jSn"/>
+                                <include reference="4RK-Dl-4fB"/>
+                                <include reference="YwA-1r-A4l"/>
+                                <include reference="aXN-oU-7nj"/>
+                                <include reference="Dry-wN-Ija"/>
+                                <include reference="OLI-Pm-Qt4"/>
+                                <include reference="led-Dm-P1q"/>
+                                <include reference="CbR-fS-TWl"/>
+                                <include reference="ImP-Iw-PLs"/>
+                                <include reference="KAW-81-ww2"/>
+                                <include reference="s0p-eT-vtw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="brightnessSlider" destination="LR8-3l-dQ1" id="qLD-yz-Aef"/>
+                        <outlet property="kelvinSlider" destination="flq-f4-BPo" id="VFQ-tZ-W2M"/>
+                        <outlet property="lightNameLabel" destination="kBQ-aJ-hJD" id="BYJ-d2-ejA"/>
+                        <outlet property="onOffSwitch" destination="XkB-ux-KBh" id="eDc-Ys-Cni"/>
                         <outlet property="tableView" destination="y7e-H4-utw" id="8D8-t1-NWg"/>
+                        <outletCollection property="controlsToDisable" destination="kBQ-aJ-hJD" id="hMY-fE-5si"/>
+                        <outletCollection property="controlsToDisable" destination="LR8-3l-dQ1" id="JsS-hU-Uwd"/>
+                        <outletCollection property="controlsToDisable" destination="flq-f4-BPo" id="HXd-Tt-rp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

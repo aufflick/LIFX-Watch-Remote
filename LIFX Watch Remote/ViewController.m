@@ -16,6 +16,12 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray * lights;
+@property (weak, nonatomic) IBOutlet UISlider * brightnessSlider;
+@property (weak, nonatomic) IBOutlet UISlider * kelvinSlider;
+@property (weak, nonatomic) IBOutlet UILabel * lightNameLabel;
+@property (nonatomic, strong) LFXLight * selectedLight;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *controlsToDisable;
+@property (weak, nonatomic) IBOutlet UISwitch *onOffSwitch;
 
 @end
 
@@ -24,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.selectedLight = nil;
     
     allLightsCollection = [[LFXClient sharedClient] localNetworkContext].allLightsCollection;
     [allLightsCollection addLightCollectionObserver:self];
@@ -47,6 +55,40 @@
     [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void)setSelectedLight:(LFXLight *)selectedLight
+{
+    _selectedLight = selectedLight;
+    
+    if (nil == selectedLight)
+    {
+        for (UIView * view in self.controlsToDisable) [(id)view setEnabled:NO];
+        self.onOffSwitch.on = NO;
+        self.lightNameLabel.text = @"None Selected";
+    }
+    else
+    {
+        for (UIView * view in self.controlsToDisable) [(id)view setEnabled:YES];
+        self.lightNameLabel.text = selectedLight.label;
+        self.onOffSwitch.on = selectedLight.powerState == LFXPowerStateOn;
+
+        LFXHSBKColor * colour = selectedLight.color;
+        self.brightnessSlider.value = colour.brightness;
+        self.kelvinSlider.value = colour.kelvin;
+    }
+}
+
+- (IBAction)brightnessOrKelvinChanged:(UISlider *)sender
+{
+    LFXHSBKColor * colour = [LFXHSBKColor whiteColorWithBrightness:self.brightnessSlider.value
+                                                            kelvin:self.kelvinSlider.value];
+    self.selectedLight.color = colour;
+}
+
+- (IBAction)onOff:(UISwitch *)sender
+{
+    self.selectedLight.powerState = sender.on ? LFXPowerStateOn : LFXPowerStateOff;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.lights count];
@@ -57,6 +99,11 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LightCell"];
     cell.textLabel.text = [self.lights[indexPath.row] label];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedLight = self.lights[indexPath.row];
 }
 
 @end
