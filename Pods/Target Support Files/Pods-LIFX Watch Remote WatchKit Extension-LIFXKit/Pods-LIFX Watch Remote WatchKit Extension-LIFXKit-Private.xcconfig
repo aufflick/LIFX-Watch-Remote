@@ -1,0 +1,5 @@
+#include "Pods-LIFX Watch Remote WatchKit Extension-LIFXKit.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/LIFXKit" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/LIFXKit"
+OTHER_LDFLAGS = ${PODS_LIFX_WATCH_REMOTE_WATCHKIT_EXTENSION_LIFXKIT_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

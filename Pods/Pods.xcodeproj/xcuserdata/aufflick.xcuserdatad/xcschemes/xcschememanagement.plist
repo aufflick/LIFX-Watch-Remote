@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-LIFX Watch Remote WatchKit Extension-LIFXKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LIFX Watch Remote WatchKit Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LIFX Watch Remote-LIFXKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07D3D79595E20C692E9119F7</key>
+		<key>2C2B9F9B0D85B70B76676131</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2861FE5DD94AC3C21F24781F</key>
+		<key>9553C0DC142BECA1B67AF4DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D21D9928726A0156D488A47F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0ECEAA3DE2F9FF7DD7BD4B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

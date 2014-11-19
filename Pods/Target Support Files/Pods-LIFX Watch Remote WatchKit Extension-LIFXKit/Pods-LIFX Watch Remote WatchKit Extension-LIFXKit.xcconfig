@@ -1,0 +1,1 @@
+PODS_LIFX_WATCH_REMOTE_WATCHKIT_EXTENSION_LIFXKIT_OTHER_LDFLAGS = -l"z" -framework "SystemConfiguration"

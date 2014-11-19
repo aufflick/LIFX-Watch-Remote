@@ -54,6 +54,8 @@
 			<key>children</key>
 			<array>
 				<string>B216A2A60AC42C718F3AA01D</string>
+				<string>6405D9BE1A1CA8360079D562</string>
+				<string>3230F936FA447E805365A219</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -62,12 +64,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>3230F936FA447E805365A219</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-LIFX Watch Remote WatchKit Extension.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>41D67F45493ACCE11845F99C</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>C20D0F5649198DBDE5D53FD8</string>
 				<string>0A50E60C7271FA11697628EF</string>
+				<string>94D4E359FBAE05DB63FDDC0F</string>
+				<string>8BE0EEF9251A25C3E3D6FE66</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -83,12 +100,584 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>6405D9B91A1CA8360079D562</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6405D9C51A1CA8360079D562</string>
+				<string>640AB3F31A1CACC100719F97</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6405D9BA1A1CA8360079D562</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6405D9BF1A1CA8360079D562</string>
+				<string>BA7AF84C30E3A4EF8B57EF25</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6405D9BB1A1CA8360079D562</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6405D9CB1A1CA8360079D562</string>
+				<string>6405D9C71A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6405D9BC1A1CA8360079D562</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>6405D9DD1A1CA8360079D562</string>
+			<key>buildPhases</key>
+			<array>
+				<string>EA66A29B6370189897F0BD79</string>
+				<string>6405D9B91A1CA8360079D562</string>
+				<string>6405D9BA1A1CA8360079D562</string>
+				<string>6405D9BB1A1CA8360079D562</string>
+				<string>65D6D37685F02C6085DE524F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>6405D9CD1A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LIFX Watch Remote WatchKit Extension</string>
+			<key>productName</key>
+			<string>LIFX Watch Remote WatchKit Extension</string>
+			<key>productReference</key>
+			<string>6405D9BD1A1CA8360079D562</string>
+			<key>productType</key>
+			<string>com.apple.product-type.watchkit-extension</string>
+		</dict>
+		<key>6405D9BD1A1CA8360079D562</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.app-extension</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LIFX Watch Remote WatchKit Extension.appex</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6405D9BE1A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>WatchKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/WatchKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>6405D9BF1A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9BE1A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6405D9C01A1CA8360079D562</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6405D9C31A1CA8360079D562</string>
+				<string>6405D9C41A1CA8360079D562</string>
+				<string>6405D9C61A1CA8360079D562</string>
+				<string>6405D9C11A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LIFX Watch Remote WatchKit Extension</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9C11A1CA8360079D562</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6405D9C21A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9C21A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9C31A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>InterfaceController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9C41A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>InterfaceController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9C51A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9C41A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6405D9C61A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9C71A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9C61A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6405D9C81A1CA8360079D562</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6405D9D21A1CA8360079D562</string>
+				<string>6405D9D41A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6405D9C91A1CA8360079D562</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>6405D9DC1A1CA8360079D562</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6405D9C81A1CA8360079D562</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LIFX Watch Remote Watch App</string>
+			<key>productName</key>
+			<string>LIFX Watch Remote Watch App</string>
+			<key>productReference</key>
+			<string>6405D9CA1A1CA8360079D562</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application.watchapp</string>
+		</dict>
+		<key>6405D9CA1A1CA8360079D562</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LIFX Watch Remote Watch App.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6405D9CB1A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9CA1A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6405D9CC1A1CA8360079D562</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>64D293FA1A1C379C00C8FB7F</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>6405D9C91A1CA8360079D562</string>
+			<key>remoteInfo</key>
+			<string>LIFX Watch Remote Watch App</string>
+		</dict>
+		<key>6405D9CD1A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>6405D9C91A1CA8360079D562</string>
+			<key>targetProxy</key>
+			<string>6405D9CC1A1CA8360079D562</string>
+		</dict>
+		<key>6405D9CE1A1CA8360079D562</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6405D9D11A1CA8360079D562</string>
+				<string>6405D9D31A1CA8360079D562</string>
+				<string>6405D9CF1A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LIFX Watch Remote Watch App</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9CF1A1CA8360079D562</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6405D9D01A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9D01A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9D11A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Interface.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9D21A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9D11A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6405D9D31A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6405D9D41A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9D31A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6405D9D51A1CA8360079D562</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>64D293FA1A1C379C00C8FB7F</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>6405D9BC1A1CA8360079D562</string>
+			<key>remoteInfo</key>
+			<string>LIFX Watch Remote WatchKit Extension</string>
+		</dict>
+		<key>6405D9D61A1CA8360079D562</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>6405D9BC1A1CA8360079D562</string>
+			<key>targetProxy</key>
+			<string>6405D9D51A1CA8360079D562</string>
+		</dict>
+		<key>6405D9D71A1CA8360079D562</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6405D9BD1A1CA8360079D562</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>RemoveHeadersOnCopy</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6405D9D81A1CA8360079D562</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>94D4E359FBAE05DB63FDDC0F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>LIFX Watch Remote WatchKit Extension/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>${TARGET_NAME}</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6405D9D91A1CA8360079D562</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8BE0EEF9251A25C3E3D6FE66</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>LIFX Watch Remote WatchKit Extension/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>${TARGET_NAME}</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6405D9DA1A1CA8360079D562</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>IBSC_MODULE</key>
+				<string>LIFX_Watch_Remote_WatchKit_Extension</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LIFX Watch Remote Watch App/Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]</key>
+				<string>1,4</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6405D9DB1A1CA8360079D562</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>IBSC_MODULE</key>
+				<string>LIFX_Watch_Remote_WatchKit_Extension</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LIFX Watch Remote Watch App/Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]</key>
+				<string>1,4</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6405D9DC1A1CA8360079D562</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6405D9DA1A1CA8360079D562</string>
+				<string>6405D9DB1A1CA8360079D562</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6405D9DD1A1CA8360079D562</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6405D9D81A1CA8360079D562</string>
+				<string>6405D9D91A1CA8360079D562</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6405D9DE1A1CA8360079D562</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string></string>
+			<key>dstSubfolderSpec</key>
+			<string>13</string>
+			<key>files</key>
+			<array>
+				<string>6405D9D71A1CA8360079D562</string>
+			</array>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>name</key>
+			<string>Embed App Extensions</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>640AB3F01A1CACC100719F97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LightDataSource.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>640AB3F11A1CACC100719F97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LightDataSource.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>640AB3F21A1CACC100719F97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>640AB3F11A1CACC100719F97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>640AB3F31A1CACC100719F97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>640AB3F11A1CACC100719F97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>64D293F91A1C379C00C8FB7F</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>64D294041A1C379C00C8FB7F</string>
 				<string>64D2941E1A1C379D00C8FB7F</string>
+				<string>6405D9C01A1CA8360079D562</string>
+				<string>6405D9CE1A1CA8360079D562</string>
 				<string>64D294031A1C379C00C8FB7F</string>
 				<string>41D67F45493ACCE11845F99C</string>
 				<string>2336A3AC3D31D885819FBD2E</string>
@@ -108,6 +697,16 @@
 				<string>The High Technology Bureau</string>
 				<key>TargetAttributes</key>
 				<dict>
+					<key>6405D9BC1A1CA8360079D562</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.2</string>
+					</dict>
+					<key>6405D9C91A1CA8360079D562</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.2</string>
+					</dict>
 					<key>64D294011A1C379C00C8FB7F</key>
 					<dict>
 						<key>CreatedOnToolsVersion</key>
@@ -151,6 +750,8 @@
 			<array>
 				<string>64D294011A1C379C00C8FB7F</string>
 				<string>64D2941A1A1C379D00C8FB7F</string>
+				<string>6405D9BC1A1CA8360079D562</string>
+				<string>6405D9C91A1CA8360079D562</string>
 			</array>
 		</dict>
 		<key>64D293FD1A1C379C00C8FB7F</key>
@@ -176,6 +777,7 @@
 				<string>64D2940E1A1C379C00C8FB7F</string>
 				<string>64D2940B1A1C379C00C8FB7F</string>
 				<string>64D294081A1C379C00C8FB7F</string>
+				<string>640AB3F21A1CACC100719F97</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -221,11 +823,14 @@
 				<string>64D293FF1A1C379C00C8FB7F</string>
 				<string>64D294001A1C379C00C8FB7F</string>
 				<string>0CF920923CCF905055ED5982</string>
+				<string>6405D9DE1A1CA8360079D562</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
 			<key>dependencies</key>
-			<array/>
+			<array>
+				<string>6405D9D61A1CA8360079D562</string>
+			</array>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
@@ -256,6 +861,8 @@
 			<array>
 				<string>64D294021A1C379C00C8FB7F</string>
 				<string>64D2941B1A1C379D00C8FB7F</string>
+				<string>6405D9BD1A1CA8360079D562</string>
+				<string>6405D9CA1A1CA8360079D562</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -276,6 +883,8 @@
 				<string>64D294121A1C379C00C8FB7F</string>
 				<string>64D294141A1C379C00C8FB7F</string>
 				<string>64D294051A1C379C00C8FB7F</string>
+				<string>640AB3F01A1CACC100719F97</string>
+				<string>640AB3F11A1CACC100719F97</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -780,6 +1389,8 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -832,6 +1443,8 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -890,6 +1503,30 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>65D6D37685F02C6085DE524F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LIFX Watch Remote WatchKit Extension/Pods-LIFX Watch Remote WatchKit Extension-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
 		<key>75022F35DE9BE08B56B99CAF</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -920,6 +1557,36 @@ fi
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
+		<key>8BE0EEF9251A25C3E3D6FE66</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LIFX Watch Remote WatchKit Extension.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LIFX Watch Remote WatchKit Extension/Pods-LIFX Watch Remote WatchKit Extension.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94D4E359FBAE05DB63FDDC0F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LIFX Watch Remote WatchKit Extension.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LIFX Watch Remote WatchKit Extension/Pods-LIFX Watch Remote WatchKit Extension.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B216A2A60AC42C718F3AA01D</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -932,6 +1599,13 @@ fi
 			<string>libPods-LIFX Watch Remote.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BA7AF84C30E3A4EF8B57EF25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3230F936FA447E805365A219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>C20D0F5649198DBDE5D53FD8</key>
 		<dict>
@@ -947,6 +1621,36 @@ fi
 			<string>Pods/Target Support Files/Pods-LIFX Watch Remote/Pods-LIFX Watch Remote.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA66A29B6370189897F0BD79</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

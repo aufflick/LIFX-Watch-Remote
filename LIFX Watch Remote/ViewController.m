@@ -7,21 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "LightDataSource.h"
 #import <LIFXKit/LIFXKit.h>
 
-@interface ViewController () <LFXLightCollectionObserver, UITableViewDataSource, UITableViewDelegate>
-{
-    LFXLightCollection * allLightsCollection;
-}
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, LightDataSourceDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray * lights;
+@property (nonatomic, strong) LightDataSource * dataSource;
+
+@property (weak, nonatomic) IBOutlet UITableView * tableView;
 @property (weak, nonatomic) IBOutlet UISlider * brightnessSlider;
 @property (weak, nonatomic) IBOutlet UISlider * kelvinSlider;
 @property (weak, nonatomic) IBOutlet UILabel * lightNameLabel;
 @property (nonatomic, strong) LFXLight * selectedLight;
-@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *controlsToDisable;
-@property (weak, nonatomic) IBOutlet UISwitch *onOffSwitch;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray * controlsToDisable;
+@property (weak, nonatomic) IBOutlet UISwitch * onOffSwitch;
 
 @end
 
@@ -32,27 +31,8 @@
     [super viewDidLoad];
     
     self.selectedLight = nil;
-    
-    allLightsCollection = [[LFXClient sharedClient] localNetworkContext].allLightsCollection;
-    [allLightsCollection addLightCollectionObserver:self];
-
-    self.lights = [allLightsCollection.lights mutableCopy];
-}
-
-- (void)lightCollection:(LFXLightCollection *)lightCollection didAddLight:(LFXLight *)light
-{
-    if (![self.lights containsObject:light])
-    {
-        [self.lights addObject:light];
-        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.lights count]-1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
-
-- (void)lightCollection:(LFXLightCollection *)lightCollection didRemoveLight:(LFXLight *)light
-{
-    NSUInteger row = [self.lights indexOfObject:light];
-    [self.lights removeObject:light];
-    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    self.dataSource = [[LightDataSource alloc] init];
+    self.dataSource.delegate = self;
 }
 
 - (void)setSelectedLight:(LFXLight *)selectedLight
@@ -62,12 +42,14 @@
     if (nil == selectedLight)
     {
         for (UIView * view in self.controlsToDisable) [(id)view setEnabled:NO];
+        
         self.onOffSwitch.on = NO;
         self.lightNameLabel.text = @"None Selected";
     }
     else
     {
         for (UIView * view in self.controlsToDisable) [(id)view setEnabled:YES];
+
         self.lightNameLabel.text = selectedLight.label;
         self.onOffSwitch.on = selectedLight.powerState == LFXPowerStateOn;
 
@@ -89,21 +71,37 @@
     self.selectedLight.powerState = sender.on ? LFXPowerStateOn : LFXPowerStateOff;
 }
 
+#pragma mark - LightDataSourceDelegate
+
+- (void)lightDataSource:(LightDataSource *)lightSource didInsertLightAtIndex:(NSInteger)idx
+{
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:idx inSection:0]]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)lightDataSource:(LightDataSource *)lightSource didRemoveLightAtIndex:(NSInteger)idx
+{
+    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:idx inSection:0]]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+#pragma mark - TableView DataSource & Delegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.lights count];
+    return [self.dataSource.lights count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LightCell"];
-    cell.textLabel.text = [self.lights[indexPath.row] label];
+    cell.textLabel.text = [self.dataSource.lights[indexPath.row] label];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedLight = self.lights[indexPath.row];
+    self.selectedLight = self.dataSource.lights[indexPath.row];
 }
 
 @end
