@@ -49,12 +49,34 @@
                                 <action selector="changeBrightness:" destination="0Ju-Ul-rO0" id="h64-GN-ABJ"/>
                             </connections>
                         </slider>
-                        <label alignment="left" text="Colour Temp" id="4km-iK-oj5"/>
+                        <label alignment="left" text="White Temp" id="4km-iK-oj5"/>
                         <slider width="1" alignment="left" value="1" minimum="2500" maximum="9600" steps="10" id="YVZ-js-6SG">
                             <connections>
                                 <action selector="changeColourTemp:" destination="0Ju-Ul-rO0" id="5Kq-3p-vn2"/>
                             </connections>
                         </slider>
+                        <group alignment="center" spacing="3" hasDetent="YES" id="5MF-VX-BaI">
+                            <items>
+                                <button width="42" alignment="left" id="Ipc-uW-VLG">
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="redPress" destination="0Ju-Ul-rO0" id="aTq-kO-9wO"/>
+                                    </connections>
+                                </button>
+                                <button width="42" alignment="left" id="ZQ5-am-ilj">
+                                    <color key="backgroundColor" red="0.034073111359999998" green="0.59517238449999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="greenPress" destination="0Ju-Ul-rO0" id="yrH-7Q-Lns"/>
+                                    </connections>
+                                </button>
+                                <button width="42" alignment="left" id="WaI-Rc-m0A">
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="bluePress" destination="0Ju-Ul-rO0" id="clF-Qd-bfC"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="brightnessSlider" destination="uJ2-uS-FRg" id="krz-ES-CEl"/>
@@ -62,7 +84,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="65" y="686"/>
+            <point key="canvasLocation" x="266" y="459.25"/>
         </scene>
     </scenes>
 </document>

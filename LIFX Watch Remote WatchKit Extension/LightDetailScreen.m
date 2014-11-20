@@ -50,7 +50,27 @@
     LFXHSBKColor * colour = [LFXHSBKColor whiteColorWithBrightness:brightness
                                                             kelvin:value];
     self.light.color = colour;
+}
 
+- (IBAction)redPress
+{
+    double brightness = self.light.color.brightness;
+    LFXHSBKColor * colour = [LFXHSBKColor colorWithHue:0 saturation:1 brightness:brightness];
+    self.light.color = colour;
+}
+
+- (IBAction)greenPress
+{
+    double brightness = self.light.color.brightness;
+    LFXHSBKColor * colour = [LFXHSBKColor colorWithHue:119 saturation:1 brightness:brightness];
+    self.light.color = colour;
+}
+
+- (IBAction)bluePress
+{
+    double brightness = self.light.color.brightness;
+    LFXHSBKColor * colour = [LFXHSBKColor colorWithHue:230 saturation:1 brightness:brightness];
+    self.light.color = colour;
 }
 
 @end
