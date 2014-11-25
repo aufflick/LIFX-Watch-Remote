@@ -14,6 +14,9 @@ You can view a video of the talk this sample code is for at the Sydney CocoaHead
  
 &copy; 2014 Mark Aufflick ([@markaufflick](http://twitter.com/markaufflick)), [The High Technology Bureau](http://htb.io).
 
+License
+-------
+
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/au/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/">Creative Commons Attribution 3.0 Australia License</a>.
 
 You are free to:
