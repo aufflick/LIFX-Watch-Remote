@@ -1,3 +1,5 @@
+<img src="https://sydneycocoaheads.files.wordpress.com/2014/11/watchkit-meet-lifx.png" width="960" height="540" />
+
 LIFX Watch Remote Demo!
 =========================
 
